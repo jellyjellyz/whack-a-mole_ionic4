@@ -1,0 +1,7 @@
+{
+  "name": "lab6_whack_a_mole_ionic4",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

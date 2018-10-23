@@ -1,10 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title>whack-a-mole</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let hole of moleHoles">
+        <ion-button
+        [ngClass]="stateToClass(hole.moleState)"
+        (click)="hit(hole)"></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <h3>{{timeLeft}}s left</h3>
+      </ion-col>
+      <ion-col size="12">
+        <h3>Your Score: {{score}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button color="dark" (click)="stopGame()">Stop Game</ion-button>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+        <ion-col size="4">
+          <ion-button color="dark" (click)="resetGame()">Reset Game</ion-button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h2 class="hit-message" [ngClass]="{'active':showHitMessage}">Hit!!</h2>
+
 </ion-content>
+

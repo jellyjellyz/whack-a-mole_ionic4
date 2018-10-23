@@ -1,1 +1,45 @@
+h3 {
+    margin: 0;
+}
+
+ion-button {
+    --margin-top: 0;
+    --margin-bottom: 0;
+    --margin-end: 0;
+    --margin-start: 0;
+    --height: 13vw;
+    --box-shadow: none;
+}
+ion-col {
+    --height: 60px;
+}
+ion-button.out {
+    --width: 100px;
+    background: url("../../assets/imgs/rodent.png");
+    --background: transparent;
+    background-size: cover;
+}
+
+ion-button.hid {
+    --width: 100px;
+    background: url("../../assets/imgs/empty.png");
+    --background: transparent;
+    background-size: cover;
+}
+
+ion-button.hit {
+    --width: 100px;
+    background: url("../../assets/imgs/rodent_hit.png");
+    --background: transparent;
+    background-size: cover;
+}
+
+.hit-message {
+    display: none;
+    color: red;
+}
+
+.hit-message.active {
+    display: block;
+}
 
